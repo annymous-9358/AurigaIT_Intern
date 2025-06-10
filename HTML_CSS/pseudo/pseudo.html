@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements-Class</title>
+    <style>
+        .section-1 {
+            background-color: #333;
+            color: #ccc;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .section-1::before {
+            content: "Before Content";
+            color: #fff;
+            font-weight: bold;
+            background-color: #444;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .section-1::after {
+            content: "After Content";
+            color: #fff;
+            font-weight: bold;
+            background-color: #444;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .section-2 {
+            background-color: #ccc;
+            color: #333;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .section-2::before {
+            content: "Before Content";
+            color: #000;
+            font-weight: bold;
+            background-color: #ddd;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .section-2::after {
+            content: "After Content";
+            color: #000;
+            font-weight: bold;
+            background-color: #ddd;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .section-2 p::first-letter {
+            font-size: 32px;
+            color: red;
+        }
+        .section-2 p::first-line {
+            font-weight: bold;
+            color: blue;
+        }
+        .section-2 p::selection {
+            background-color: yellow;
+            color: black;
+        }
+        .section-1:hover{
+            background-color: #ccc;
+            color: #333;
+
+        }
+        .section-2 p:hover{
+            color: #ccc;
+            background-color: #333;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="section-1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis amet praesentium veniam pariatur beatae ut placeat eum dolorum, voluptatibus a, blanditiis cumque corporis ullam, excepturi provident quibusdam voluptates eius error.</p>
+    </section>
+    
+    <section class="section-2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos id laudantium corrupti sint tempore. Repellendus dolorum aliquam velit, ad at perspiciatis optio harum totam deserunt odio sit dolorem sed exercitationem.</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="forms.html" method="post">
+        <div>
+            <label for="username">Username</label>
+
+            <input type="email" name="email" id="username" placeholder="Write your email">
+        </div>
+        <div>
+
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <div>
+
+            <label for="DOB">Date of Birth</label>
+            <input type="date" name="DOB" id="DOB" >
+        </div>
+        <div>
+
+            <label for="gender">I am</label>
+            <select name="gender" id="gender">
+            
+            <option value="male">Male</option>
+        <option value="Female" >Female</option>
+    </select>
+        </div>
+
+
+         <div>
+            Select a brand:
+            <label for="brandName1">Addidas</label>
+            <input type="checkbox" name="brand" id="brandName1" value="Addidas" checked>
+            <label for="brandName2">Puma</label>
+            <input type="radio" name="brand" id="brandName2" value="Puma">
+            <label for="brandName3">Nike</label>
+            <input type="radio" name="brand" id="brandName3" value="Nike">
+            <label for="brandName4">New Balance</label>
+            <input type="radio" name="brand" id="brandName4" value="New Balance">
+        </div>
+
+
+        <div>
+            <label for="About">About Me</label>
+            <textarea name="About" id="About" cols="30" rows="10" placeholder="I am ..."></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

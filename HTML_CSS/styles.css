@@ -1,0 +1,16 @@
+/* External CSS */
+@font-face {
+    src: url(fonts/WinkyRough-Italic-VariableFont_wght.ttf) ;
+    font-family: 'winky-rough';
+    font-weight: 400;
+}
+body{
+    justify-content: center;
+    display: flex;
+}
+article p{
+    font-family: 'winky-rough';
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+}

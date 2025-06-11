@@ -3,10 +3,10 @@
     padding: 0;
 }
 body{
-    display: flex;
-    align-items: center;
-    background: linear-gradient(45deg, #f3ec78, #af4261);
+    align-content: center;
+    background: linear-gradient(90deg, #f3ec78, #af4261);
     height: 100vh;
+    overflow: hidden;
 }
 .container{
    display: flex;

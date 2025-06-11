@@ -6,7 +6,7 @@ body{
     align-content: center;
     background: linear-gradient(90deg, #f3ec78, #af4261);
     height: 100vh;
-    overflow: hidden;
+    
 }
 .container{
    display: flex;
@@ -17,7 +17,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50px;
-    flex: 1;
+    flex: 1000;
     margin: 10px;
     position: relative;
     transition: all 1.5s ease-in-out;
@@ -34,6 +34,17 @@ body{
 }
 
 .box:hover, .box:hover h3{
-    flex: 6;
+    flex: 6000;
     opacity: 1;
+}
+.transtion{
+    transition: width 1.5s ease-in-out;
+   width: 10px;
+    height: 10px;
+    background-color: black;
+    
+}
+.transtion:hover{
+    width: 100%;
+    background-color: #af4261;
 }

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    height: 100vh;
+}
+.container{
+   display: flex;
+   width: 100%;
+}
+.box{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: all 1.5s ease-in-out;
+    height: 80vh;
+}
+.box h3{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+
+.box:hover, .box:hover h3{
+    flex: 6;
+    opacity: 1;
+}

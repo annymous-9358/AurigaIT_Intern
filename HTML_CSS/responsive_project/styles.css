@@ -75,10 +75,10 @@ ul {
     display: flex;
   }
 }
-@media (min-width:550px) {
+/* @media (min-width:550px) {
    .banner {
   }
-}
+} */
 main{
   background-color: #f0f0f0;
 }

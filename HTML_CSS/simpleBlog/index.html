@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog-Kunik Jain</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo-link">
+                <img src="image/logo-light.svg" alt="simpleBlog Logo" class="logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobileNav">
+                <input type="checkbox" id="menu-toggle" />
+                <label for="menu-toggle" class="hamburger">&#9776;</label>
+                <ul class="mobile-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Hi, I'm Kunik Jain.<br><span>Web Developer</span></h1>
+                <p>Specialized in a11y and Core Web Vitals</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Contact Me</a>
+                    <a href="#about" class="btn btn-secondary">About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/hero.png" alt="Kunik Jain" class="hero-img-laptop">
+            </div>
+        </div>
+    </section>
+    <div class="main-content">
+        <section class="latest-posts">
+            <h2>Latest Blog Post</h2>
+            <div class="blog-list">
+                <div class="blog-card">
+                    <img src="image/blog-1.png" alt="Blog 1">
+                    <div class="blog-content">
+                        <span class="category">Database</span>
+                        <h3>Building microservices with Dropwizard, MongoDB & Docker</h3>
+                        <p>This NoSQL database oriented to documents (by documents like JSON) combines some of the features from relational databases, easy to use and the multi-platform is the best option for scale up and have fault tolerance, load balancing, map reduce, etc.</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            <span class="meta-date">Jan 17, 2022</span>
+                            <span class="meta-time">3 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-2.png" alt="Blog 2">
+                    <div class="blog-content">
+                        <span class="category">Web Performance</span>
+                        <h3>Fast web page loading on a $20 feature phone</h3>
+                        <p>Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in developing countries to leverage the web...</p>
+                        <div class="blog-meta">
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Dec 10, 2021</span>
+                            
+                            <span class="meta-time">2 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-3.png" alt="Blog 3">
+                    <div class="blog-content">
+                        <span class="category">Accessibility</span>
+                        <h3>Accessibility Tips for Web Developers</h3>
+                        <p>It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key areas of disability we can optimize for...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Nov 28, 2021</span>
+                            
+                            <span class="meta-time">4 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-4.png" alt="Blog 4">
+                    <div class="blog-content">
+                        <span class="category">Database</span>
+                        <h3>Dynamically Securing Databases using Hashicorp Vault</h3>
+                        <p>It's hard to profoundly talk about security in the IT industry, since it has to be considered on so many different levels...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Nov 20, 2021</span>
+                            
+                            <span class="meta-time">4 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-5.png" alt="Blog 5">
+                    <div class="blog-content">
+                        <span class="category">Web Performance</span>
+                        <h3>Adaptive Loading - Improving Web Performance on low-end devices</h3>
+                        <p>Adaptive Loading: Do not just respond based on screen size, adapt based on actual device hardware. Any user can have a slow experience...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Nov 10, 2021</span>
+                            
+                            <span class="meta-time">3 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-6.png" alt="Blog 6">
+                    <div class="blog-content">
+                        <span class="category">Accessibility</span>
+                        <h3>Don't Develop Just for Yourself - A Developer's Checklist to Accessibility</h3>
+                        <p>We, as developers, tend to develop sites unconsciously for people like ourselves. If we don't actively pay attention, the sites are often accessible only for certain types of people...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Oct 25, 2021</span>
+                            
+                            <span class="meta-time">7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-7.png" alt="Blog 7">
+                    <div class="blog-content">
+                        <span class="category">Database</span>
+                        <h3>Building a Restful CRUD API with Node JS, Express, and MongoDB</h3>
+                        <p>An API is a software interface that enables two apps to communicate with one another. In other words, an API is a messenger that sends your request to the provider and then returns the response to you.</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Oct 15, 2021</span>
+                            
+                            <span class="meta-time">5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-8.png" alt="Blog 8">
+                    <div class="blog-content">
+                        <span class="category">Web Performance</span>
+                        <h3>Monitoring Performance with the PageSpeed Insights API</h3>
+                        <p>The PageSpeed Insights API provides free access to performance monitoring for web pages and returns data with suggestions for how to improve...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Oct 3, 2021</span>
+                            
+                            <span class="meta-time">5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-9.png" alt="Blog 9">
+                    <div class="blog-content">
+                        <span class="category">Accessibility</span>
+                        <h3>The best web accessibility tools for developers in 2021</h3>
+                        <p>The quality of the tools you use defines the speed with which you can diagnose and resolve problems. Each year the landscape changes dramatically in web technologies...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Sep 13, 2021</span>
+                            
+                            <span class="meta-time">7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="image/blog-10.png" alt="Blog 10">
+                    <div class="blog-content">
+                        <span class="category">Database</span>
+                        <h3>How to connect a React frontend with a NodeJS/Express backend</h3>
+                        <p>The MERN (MongoDB, Express, React, NodeJS) stack is very popular for making full stack applications, utilizing Javascript for both the backend and frontend as well as a document-oriented or non relational database (MongoDB)...</p>
+                        <div class="blog-meta">
+                            
+                            <span>Kunik Jain</span>
+                            
+                            <span class="meta-date">Sep 21, 2021</span>
+                            
+                            <span class="meta-time">4 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h4>Topics</h4>
+                <ul>
+                    <li><a href="#">Database</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Web Performance</a></li>
+                </ul>
+            </div>
+            <div class="sidebar-card">
+                <h4>Tags</h4>
+                <div class="tags-list">
+                    <span class="tag">#mongodb</span>
+                    <span class="tag">#nodejs</span>
+                    <span class="tag">#a11y</span>
+                    <span class="tag">#mobility</span>
+                    <span class="tag">#inclusion</span>
+                    <span class="tag">#webperf</span>
+                    <span class="tag">#optimize</span>
+                    <span class="tag">#performance</span>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h4>Let's Talk</h4>
+                <p>Do you want to learn more about how I can help your company overcome problems? Let us have a conversation.</p>
+                <div class="social-icons">
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="Facebook">📘</a>
+                </div>
+            </div>
+            <div class="sidebar-card">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Advertise with us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Legal Stuff</h4>
+            <ul>
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; Copyright 2025 KunikJain</p>
+    </div>
+</footer>
+
+</body>
+</html>

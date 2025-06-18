@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    align-content: center;
+    background: linear-gradient(90deg, #f3ec78, #af4261);
+    height: 100vh;
+    
+}
+.container{
+   display: flex;
+   width: 100%;
+}
+.box{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    flex: 1000;
+    margin: 10px;
+    position: relative;
+    transition: all 1.5s ease-in-out;
+    height: 80vh;
+}
+.box h3{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 1rem;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+}
+
+.box:hover, .box:hover h3{
+    flex: 6000;
+    opacity: 1;
+}
+.transtion{
+    transition: width 1.5s ease-in-out;
+   width: 10px;
+    height: 10px;
+    background-color: black;
+    
+}
+.transtion:hover{
+    width: 100%;
+    background-color: #af4261;
+}

@@ -9,13 +9,18 @@
             margin: 0;
             padding: 0;
         }
+        html, body{
+            height: 100%;
+        }
         body {
-            background: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+         background: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&w=2950&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            background-attachment: fixed;
+            
         }
+
 
         nav {
             background: transparent;
@@ -39,7 +44,12 @@
 
         nav ul li {
             display: inline-block;
+
             
+        }
+        nav ul li:hover {
+            backdrop-filter: blur(100px);
+            padding: 5px;
         }
 
         nav ul li a {
@@ -56,36 +66,54 @@
             display: none;
             position: absolute;
             background-color: transparent;
+            background-attachment: fixed;
             padding: 0;
             backdrop-filter: blur(1px);
         }
 
         nav ul li:hover > ul {
             display: block;
-            ;
         }
 
         nav ul li ul li {
             display: flex;
-            flex-direction: column;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+
         }
     </style>
 </head>
 <body>
-    <nav>
-        <p>ptravels</p>
-        <ul>
-            <li><a href="dropdown.html">Home</a></li>
-            <li><a href="#">Portfolio</a>
-                <ul>
-                    <li><a href="#">Digital art</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Photography</a></li>
-                </ul> 
-            </li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-</body>
-</html>
+    <section>
+    
+        
+        <nav>
+            <p>ptravels</p>
+            <ul>
+                <li><a href="dropdown.html">Home</a></li>
+                <li><a href="#">Portfolio</a>
+                    <ul>
+                        <li><a href="#">Digital art</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Photography</a></li>
+                    </ul> 
+                </li>
+                <li><a href="#">About me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </section>   
+    <footer>
+        <p style="text-align: center; color: white; padding: 20px;">&copy; 2023 ptravels</p>
+        <p style="text-align: center; color: white;">Follow me on <a href="https://www.instagram.com/jain_kunik/" style="color: white; text-decoration: none;">Instagram</a></p>
+        <p style="text-align: center; color: white;">Made with ❤️ by ptravels</p>
+            
+
+    </footer>
+    </body>
+    </html>

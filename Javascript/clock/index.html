@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <style>
+    .clock {
+      background: #eeebee url(Ios_clock.svg) no-repeat center;
+      height: 20em;
+      width: 20em;
+      border-radius: 50%;
+      background-size: 90%;
+      position: relative;
+      border: 2px solid black;
+    }
+
+    .clock:after {
+      background: black;
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 5%;
+      height: 5%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    .hours-container,
+    .minutes-container,
+    .seconds-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform-origin: 50% 50%;
+    }
+
+    .hours {
+      background: red;
+      height: 20%;
+      position: absolute;
+      left: 49%;
+      top: 28%;
+      width: 2%;
+      transform-origin: 50% 100%;
+    }
+
+    .minutes {
+      background: black;
+      height: 30%;
+      position: absolute;
+      left: 49%;
+      top: 20%;
+      width: 2%;
+      transform-origin: 50% 100%;
+    }
+
+    .seconds {
+      background: black;
+      height: 35%;
+      position: absolute;
+      left: 49.5%;
+      top: 17%;
+      width: 1%;
+      transform-origin: 50% 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock">
+    <div class="hours-container" id="hour-container">
+      <div class="hours"></div>
+    </div>
+    <div class="minutes-container" id="minute-container">
+      <div class="minutes"></div>
+    </div>
+    <div class="seconds-container" id="second-container">
+      <div class="seconds"></div>
+    </div>
+  </div>
+
+  <script src="script.js"> </script>
+</body>
+
+</html>

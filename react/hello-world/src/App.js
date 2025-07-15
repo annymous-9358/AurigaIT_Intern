@@ -1,4 +1,5 @@
 import './App.css';
+import ParentComponent1 from './components/ParentComponent1';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -10,12 +11,20 @@ import './App.css';
 // import ParentComponent from './components/ParentComponent';
 // import UserGreeting from './components/UserGreeting';
 // import NameList from './components/NameList';
-import Form from './components/Form';
+// import Form from './components/Form';
+// import LifecycleA from './components/LifecycleA';
+// import FragmentDemo from './components/FragmentDemo';
+// import Table from './components/Table';
+// import PureComponent from './components/PureComponent';
+
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <ParentComponent1/>
+      {/* <FragmentDemo /> */}
+      {/* <LifecycleA /> */}
+      {/* <Form /> */}
       {/* <NameList /> */}
       {/* <UserGreeting /> */}
       {/* <ParentComponent />

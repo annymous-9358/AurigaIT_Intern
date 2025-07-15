@@ -18,10 +18,14 @@ class Form extends Component {
     handleTopicChange = (event) => {
         this.setState({ topic: event.target.value })
     }
+    handleSubmit = (event) => {
+        alert(`${this.state.username} ${this.state.comments} ${this.state.topic}`)
+        event.preventDefault()
+    }
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
             <div>
           
           <label>Username</label>
@@ -43,6 +47,7 @@ class Form extends Component {
                     <option value="vue">Vue</option>
                 </select>
             </div>
+            <button type="submit">Submit</button>
           
         </form>
       </div>

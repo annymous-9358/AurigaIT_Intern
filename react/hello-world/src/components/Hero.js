@@ -1,0 +1,13 @@
+import React from 'react'
+
+function Hero({heroName}) {
+    if (heroName === 'SuperMan') {
+        throw new Error('Not a hero');
+    }
+    
+  return (
+    <div>{heroName}</div>
+  )
+}
+
+export default Hero

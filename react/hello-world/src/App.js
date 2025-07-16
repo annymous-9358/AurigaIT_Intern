@@ -1,5 +1,13 @@
 import './App.css';
-import ParentComponent1 from './components/ParentComponent1';
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
+// import ErrorBoundary from './components/ErrorBoundary';
+// import FocusInput from './components/FocusInput';
+// import FRParentInput from './components/FRParentInput';
+// import Hero from './components/Hero';
+// import ParentComponent1 from './components/ParentComponent1';
+// import RefDemo from './components/RefDemo';
+
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -16,12 +24,30 @@ import ParentComponent1 from './components/ParentComponent1';
 // import FragmentDemo from './components/FragmentDemo';
 // import Table from './components/Table';
 // import PureComponent from './components/PureComponent';
+import ClickCounter2 from './components/ClickCounter2';
+import HoverCounter2 from './components/HoverCounter2';
 
 
 function App() {
   return (
     <div className="App">
-      <ParentComponent1/>
+      <ClickCounter2 />
+      <HoverCounter2 />
+      {/* <ClickCounter />
+      <HoverCounter/> */}
+      {/* <ErrorBoundary>
+      <Hero heroName='Batman'/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName='SpiderMan'/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName='SuperMan'/>
+      </ErrorBoundary> */}
+      {/* <FRParentInput/> */}
+      {/* <FocusInput /> */}
+      {/* <RefDemo /> */}
+      {/* <ParentComponent1/> */}
       {/* <FragmentDemo /> */}
       {/* <LifecycleA /> */}
       {/* <Form /> */}

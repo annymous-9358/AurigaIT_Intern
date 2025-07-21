@@ -1,5 +1,5 @@
 import './App.css';
-import DataFetching from './compponents/useEffect/DataFetching';
+// import DataFetching from './compponents/useEffect/DataFetching';
 // import IntervalClassCounter from './compponents/useEffect/IntervalClassCounter';
 // import IntervalHookCounter from './compponents/useEffect/IntervalHookCounter';
 // import ClassCounter1 from './compponents/useEffect/ClassCounter1';
@@ -11,13 +11,25 @@ import DataFetching from './compponents/useEffect/DataFetching';
 // import HookCounter2 from './compponents/useState/HookCounter2';
 // import HookCounter3 from './compponents/useState/HookCounter3';
 // import HookCounter4 from './compponents/useState/HookCounter4';
+// import ComponentC from './compponents/useContext/ComponentC';
 
+import React from 'react';
+import ParentComponent from './compponents/useCallback/ParentComponent';
+
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
+      < ParentComponent />
+      {/* <UserContext.Provider value={'Kunik'}>
+        <ChannelContext.Provider value={'Channel-1'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider> */}
       {/* <IntervalHookCounter /> */}
-      <DataFetching/>
+      {/* <DataFetching/> */}
      {/* <ClassCounter1 /> */}
       {/* <HookCounter1 /> */}
       {/* <ClassMouse /> */}

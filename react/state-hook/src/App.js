@@ -12,9 +12,10 @@ import './App.css';
 // import HookCounter3 from './compponents/useState/HookCounter3';
 // import HookCounter4 from './compponents/useState/HookCounter4';
 // import ComponentC from './compponents/useContext/ComponentC';
+import Greeting from './compponents/useState/Greeting';
 
 import React from 'react';
-import ParentComponent from './compponents/useCallback/ParentComponent';
+// import ParentComponent from './compponents/useCallback/ParentComponent';
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -22,7 +23,7 @@ export const ChannelContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      < ParentComponent />
+      < Greeting />
       {/* <UserContext.Provider value={'Kunik'}>
         <ChannelContext.Provider value={'Channel-1'}>
           <ComponentC />

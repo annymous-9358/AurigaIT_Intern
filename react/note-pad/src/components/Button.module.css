@@ -1,0 +1,83 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: none;
+  font-family: inherit;
+  outline: none;
+  gap: 6px;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Size variants */
+.buttonSmall {
+  padding: 4px 8px;
+  font-size: 12px;
+  min-height: 24px;
+}
+
+.buttonMedium {
+  padding: 8px 12px;
+  font-size: 14px;
+  min-height: 32px;
+}
+
+.buttonLarge {
+  padding: 12px 16px;
+  font-size: 16px;
+  min-height: 40px;
+}
+
+/* Style variants */
+.buttonPrimary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.buttonPrimary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.buttonSecondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.buttonSecondary:hover:not(:disabled) {
+  background-color: var(--bg-hover);
+}
+
+.buttonDanger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.buttonDanger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.buttonGhost {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.buttonGhost:hover:not(:disabled) {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}

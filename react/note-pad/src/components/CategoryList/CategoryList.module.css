@@ -1,0 +1,6 @@
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 12px;
+}

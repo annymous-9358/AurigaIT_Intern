@@ -12,7 +12,6 @@ function useNotes() {
         const parsedNotes = JSON.parse(savedNotes);
         setNotes(parsedNotes);
       } catch (error) {
-        console.error('Error parsing saved notes:', error);
         const welcomeNote = {
           id: Date.now(),
           title: 'Welcome to NotePad!',

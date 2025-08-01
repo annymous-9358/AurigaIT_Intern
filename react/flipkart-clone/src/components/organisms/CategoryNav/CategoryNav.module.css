@@ -1,0 +1,162 @@
+/* CategoryNav.module.css */
+.categoryNav {
+  background: white;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.categoryContainer {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  justify-content: flex-start;
+}
+
+.categoryItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  min-width: 140px;
+  transition: all 0.2s ease;
+  position: relative;
+  text-decoration: none;
+  color: #212121;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.categoryItem:hover {
+  color: #2874f0;
+  background-color: #f7f7f7;
+}
+
+.categoryImage {
+  width: 64px;
+  height: 64px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryImage img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.categoryName {
+  font-size: 14px;
+  font-weight: bolder;
+  line-height: 1.4;
+  text-align: center;
+  flex: 1;
+  margin-right: 8px;
+}
+
+.categoryItem:hover .categoryArrow {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .categoryContainer {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .categoryContainer::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .categoryItem {
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+  
+  .categoryImage {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .categoryImage img {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .categoryName {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    padding: 0 4px;
+  }
+  
+  .categoryItem {
+    min-width: 80px;
+    padding: 8px 4px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .categoryImage {
+    width: 48px;
+    height: 48px;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  
+  .categoryImage img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .categoryName {
+    font-size: 11px;
+    margin-right: 0;
+    line-height: 1.2;
+  }
+  
+  .categoryArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryContainer {
+    padding: 0 2px;
+  }
+  
+  .categoryItem {
+    min-width: 70px;
+    padding: 6px 2px;
+  }
+  
+  .categoryImage {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2px;
+  }
+  
+  .categoryImage img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .categoryName {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70px;
+  }
+}

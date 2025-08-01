@@ -1,0 +1,46 @@
+<svg width="100%" height="100%" viewBox="0 0 1600 270" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c5ce7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5b4bd8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="270" fill="url(#bgGradient4)"/>
+  
+  <!-- Home decorative elements -->
+  <path d="M1350 80 L1400 50 L1450 80 L1450 130 L1350 130 Z" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  <rect x="1370" y="100" width="15" height="20" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="1420" cy="90" r="3" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Kitchen utensils -->
+  <ellipse cx="1300" cy="180" rx="25" ry="15" fill="rgba(255,255,255,0.1)"/>
+  <rect x="1295" y="165" width="10" height="30" fill="rgba(255,255,255,0.15)"/>
+  
+  <!-- Main heading -->
+  <text x="80" y="85" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="white">
+    HOME &amp; KITCHEN
+  </text>
+  
+  <!-- Subheading -->
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.9)">
+    Transform Your Living Space
+  </text>
+  
+  <!-- Discount badge -->
+  <rect x="80" y="145" width="120" height="30" rx="15" fill="#ff6161"/>
+  <text x="140" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">
+    Up to 60% OFF
+  </text>
+  
+  <!-- Call to action -->
+  <rect x="220" y="145" width="140" height="30" rx="15" fill="white"/>
+  <text x="290" y="165" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#6c5ce7" text-anchor="middle">
+    DISCOVER
+  </text>
+  
+  <!-- Additional decorative dots -->
+  <circle cx="1480" cy="200" r="4" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="1460" cy="220" r="2" fill="rgba(255,255,255,0.25)"/>
+</svg>

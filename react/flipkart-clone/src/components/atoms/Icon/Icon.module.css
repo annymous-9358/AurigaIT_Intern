@@ -1,0 +1,43 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #878787;
+  cursor: default;
+  transition: color 0.2s ease;
+}
+
+.small {
+  font-size: 16px;
+}
+
+.medium {
+  font-size: 20px;
+}
+
+.large {
+  font-size: 24px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  color: #2874f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .small {
+    font-size: 18px;
+  }
+  
+  .medium {
+    font-size: 22px;
+  }
+  
+  .large {
+    font-size: 26px;
+  }
+}

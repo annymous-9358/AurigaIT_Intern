@@ -1,0 +1,87 @@
+/* ErrorMessage.module.css */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.errorContainer.fullWidth {
+  width: 100%;
+  min-height: 300px;
+}
+
+.errorIcon {
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.errorIcon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.errorTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0 0 8px 0;
+}
+
+.errorMessage {
+  font-size: 14px;
+  color: #878787;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.retryButton {
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .errorContainer {
+    padding: 32px 16px;
+  }
+  
+  .errorIcon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .errorTitle {
+    font-size: 16px;
+  }
+  
+  .errorMessage {
+    font-size: 13px;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorContainer {
+    padding: 24px 12px;
+  }
+  
+  .errorIcon svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .errorTitle {
+    font-size: 15px;
+  }
+  
+  .errorMessage {
+    font-size: 12px;
+    max-width: 250px;
+  }
+}

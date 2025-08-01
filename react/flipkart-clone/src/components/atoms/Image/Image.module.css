@@ -1,0 +1,22 @@
+.image {
+  object-fit: cover;
+  cursor: default;
+  transition: transform 0.2s ease;
+  display: block;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image {
+    max-width: 100%;
+    height: auto;
+  }
+}

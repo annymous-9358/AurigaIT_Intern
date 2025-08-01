@@ -1,0 +1,177 @@
+/* OffersBanner.module.css */
+.offersBanner {
+  background: white;
+  margin: 0; /* Remove margins for full-width */
+  width: 100%; /* Make full width */
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1600px; 
+  margin: 0 auto; /* Center the content */
+  height: auto; /* Let height be determined by aspect ratio */
+  aspect-ratio: 1600/270; /* Maintain the SVG's aspect ratio */
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Contain ensures full image is visible without cropping */
+  object-position: center;
+  display: block;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 48px;
+  height: 104px;
+  font-size: 18px;
+  color: #0f0202;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2874f0;
+}
+
+.prevButton {
+  left: 0;
+  border-radius: 0 2px 2px 0;
+  background: transparent;
+}
+
+.nextButton {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+  background: transparent;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 16px;
+  height: 4px;
+  border-radius: 2px;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.activeIndicator {
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .offersBanner {
+    margin: 8px;
+  }
+  
+  .sliderContainer {
+    height: 200px; /* Proportional to new height */
+  }
+  
+  .navButton {
+    width: 40px;
+    height: 80px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .offersBanner {
+    margin: 4px;
+  }
+  
+  .sliderContainer {
+    max-width: 100%;
+    aspect-ratio: 1600/270; /* Maintain aspect ratio on tablet */
+  }
+  
+  .navButton {
+    width: 32px;
+    height: 60px;
+    font-size: 14px;
+  }
+  
+  .indicators {
+    bottom: 12px;
+    gap: 6px;
+  }
+  
+  .indicator {
+    width: 12px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .offersBanner {
+    margin: 0;
+  }
+  
+  .sliderContainer {
+    max-width: 100%;
+    aspect-ratio: 1600/270; 
+  }
+  
+  .navButton {
+    width: 28px;
+    height: 50px;
+    font-size: 12px;
+  }
+  
+  .indicators {
+    bottom: 8px;
+    gap: 4px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 2px;
+  }
+}

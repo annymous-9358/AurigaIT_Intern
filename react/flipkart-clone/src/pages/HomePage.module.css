@@ -1,0 +1,143 @@
+.homePage {
+  min-height: 100vh;
+  background-color: #f1f3f6;
+}
+
+.mainContent {
+  /* Remove max-width and margins for full-screen layout like Flipkart */
+  width: 100%;
+  padding: 0;
+}
+
+.heroSection {
+  margin: 0; /* Remove margins for full-width */
+}
+
+.dealsContainer {
+  margin: 0; /* Remove margins for full-width */
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: white;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: white;
+  border-radius: 8px;
+  margin: 16px 0;
+  padding: 20px;
+}
+
+.searchResults {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.searchResults h2 {
+  color: #212121;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.searchResultsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 0 12px;
+  }
+  
+  .searchResultsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 0 8px;
+  }
+  
+  .heroSection,
+  .dealsContainer {
+    margin: 12px 0;
+  }
+  
+  .searchResults {
+    padding: 16px;
+    margin: 12px 0;
+  }
+  
+  .searchResults h2 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .searchResultsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 0 4px;
+  }
+  
+  .heroSection,
+  .dealsContainer {
+    margin: 8px 0;
+  }
+  
+  .searchResults {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+  }
+  
+  .searchResults h2 {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .searchResultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .loadingContainer,
+  .errorContainer {
+    min-height: 300px;
+    margin: 8px 0;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mainContent {
+    padding: 0 2px;
+  }
+  
+  .searchResultsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+}

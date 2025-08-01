@@ -1,0 +1,276 @@
+.searchPage {
+  min-height: 100vh;
+  background-color: #f1f3f6;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  background: white;
+  padding: 24px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
+  margin: 0 0 8px 0;
+}
+
+.resultCount {
+  font-size: 14px;
+  color: #878787;
+  margin: 0;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.productCard {
+  background: white;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.productCard:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.imageContainer {
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #f8f8f8;
+  transition: transform 0.2s ease;
+}
+
+.imageContainer:hover .productImage {
+  transform: scale(1.05);
+}
+
+.discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #ff6161;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.productInfo {
+  padding: 16px;
+}
+
+.productTitle {
+  font-size: 14px;
+  color: #212121;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  cursor: pointer;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productTitle:hover {
+  color: #2874f0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #ffa500;
+  font-size: 12px;
+}
+
+.ratingText {
+  font-size: 12px;
+  color: #878787;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.currentPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.originalPrice {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.addToCartBtn {
+  width: 100%;
+  background: #ff9f00;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background: #e68900;
+}
+
+.noResults {
+  background: white;
+  padding: 64px 24px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.noResultsIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.noResults h2 {
+  font-size: 20px;
+  color: #212121;
+  margin: 0 0 8px 0;
+}
+
+.noResults p {
+  font-size: 14px;
+  color: #878787;
+  margin: 0 0 24px 0;
+}
+
+.backButton {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.backButton:hover {
+  background: #1557d1;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background: white;
+  border-radius: 2px;
+  margin: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+  
+  .header {
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+  
+  .imageContainer {
+    height: 160px;
+  }
+  
+  .productInfo {
+    padding: 12px;
+  }
+  
+  .noResults {
+    padding: 48px 16px;
+  }
+  
+  .noResultsIcon {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+  }
+  
+  .productCard {
+    border-radius: 4px;
+  }
+  
+  .imageContainer {
+    height: 140px;
+  }
+  
+  .productInfo {
+    padding: 8px;
+  }
+  
+  .productTitle {
+    font-size: 13px;
+  }
+  
+  .currentPrice {
+    font-size: 14px;
+  }
+  
+  .addToCartBtn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}

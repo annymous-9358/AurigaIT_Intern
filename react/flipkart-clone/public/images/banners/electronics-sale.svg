@@ -1,0 +1,43 @@
+<svg width="100%" height="100%" viewBox="0 0 1600 270" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bgGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b894;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00a085;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1600" height="270" fill="url(#bgGradient3)"/>
+  
+  <!-- Decorative circuit-like patterns -->
+  <path d="M1300 50 L1350 50 L1350 100 L1400 100" stroke="rgba(255,255,255,0.2)" stroke-width="3" fill="none"/>
+  <path d="M1320 150 L1380 150 L1380 200 L1420 200" stroke="rgba(255,255,255,0.15)" stroke-width="2" fill="none"/>
+  <circle cx="1350" cy="50" r="5" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="1400" cy="100" r="4" fill="rgba(255,255,255,0.25)"/>
+  
+  <!-- Main heading -->
+  <text x="80" y="90" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white">
+    ELECTRONICS SALE
+  </text>
+  
+  <!-- Subheading -->
+  <text x="80" y="130" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.9)">
+    Smartphones, Laptops &amp; Gadgets
+  </text>
+  
+  <!-- Price highlight -->
+  <text x="80" y="165" font-family="Arial, sans-serif" font-size="18" fill="#ffd700" font-weight="bold">
+    Starting ₹999
+  </text>
+  
+  <!-- Call to action -->
+  <rect x="80" y="185" width="170" height="40" rx="20" fill="white"/>
+  <text x="165" y="210" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00a085" text-anchor="middle">
+    SHOP NOW
+  </text>
+  
+  <!-- Tech-inspired decorative elements -->
+  <rect x="1200" y="80" width="15" height="15" fill="rgba(255,255,255,0.2)" rx="2"/>
+  <rect x="1230" y="110" width="12" height="12" fill="rgba(255,255,255,0.15)" rx="2"/>
+  <rect x="1180" y="160" width="10" height="10" fill="rgba(255,255,255,0.25)" rx="1"/>
+</svg>

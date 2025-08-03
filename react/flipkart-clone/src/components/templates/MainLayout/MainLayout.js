@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../../contexts/CartContext';
+import { useLogin } from '../../../contexts/LoginContext';
 import styles from './MainLayout.module.css';
 import Header from '../../organisms/Header';
 
@@ -13,6 +14,12 @@ const MainLayout = ({
 }) => {
   const navigate = useNavigate();
   const { cartCount } = useCart();
+  const { isLoggedIn: contextLoggedIn, toggleLogin, userDropdownItems: contextDropdownItems, handleUserAction } = useLogin();
+
+  // Use context values if props are not provided
+  const loginState = isLoggedIn !== undefined ? isLoggedIn : contextLoggedIn;
+  const loginHandler = onLoginClick || toggleLogin;
+  const dropdownItems = userDropdownItems || contextDropdownItems;
 
   const handleCartClick = () => {
     navigate('/cart');
@@ -22,11 +29,12 @@ const MainLayout = ({
     <div className={styles.layoutContainer}>
       <Header
         onSearch={onSearch}
-        onLoginClick={onLoginClick}
+        onLoginClick={loginHandler}
         onCartClick={handleCartClick}
         cartItemCount={cartCount}
-        isLoggedIn={isLoggedIn}
-        userDropdownItems={userDropdownItems}
+        isLoggedIn={loginState}
+        userDropdownItems={dropdownItems}
+        onUserAction={handleUserAction}
       />
       
       <main className={styles.mainContent}>

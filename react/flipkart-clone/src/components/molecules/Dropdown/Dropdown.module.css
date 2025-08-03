@@ -31,6 +31,12 @@
   transition: all 0.2s ease;
 }
 
+/* Right-aligned dropdown for items at the edge of screen */
+.dropdownMenu.rightAlign {
+  left: auto;
+  right: 0;
+}
+
 .dropdownMenu.open {
   opacity: 1;
   visibility: visible;
@@ -80,6 +86,13 @@
 @media (max-width: 768px) {
   .dropdownMenu {
     min-width: 180px;
+    /* Ensure dropdown doesn't go off-screen on tablets */
+    max-width: calc(100vw - 20px);
+  }
+  
+  .dropdownMenu.rightAlign {
+    right: 0;
+    left: auto;
   }
   
   .dropdownItem {
@@ -91,6 +104,10 @@
 @media (max-width: 480px) {
   .dropdownMenu {
     min-width: 160px;
+    /* Prevent dropdown from going off-screen on mobile */
+    max-width: calc(100vw - 16px);
+    right: 8px;
+    left: auto;
   }
   
   .dropdownItem {

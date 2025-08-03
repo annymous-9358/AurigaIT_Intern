@@ -7,7 +7,9 @@ const Dropdown = ({
   label, 
   items = [], 
   onSelect,
-  className = ''
+  className = '',
+  showArrow = true,
+  alignRight = false
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,14 +30,16 @@ const Dropdown = ({
     <>
       <div className={`${styles.overlay} ${isOpen ? styles.open : styles.closed}`} onClick={closeDropdown} />
       <div className={`${styles.dropdownContainer} ${className}`}>
-        <div className={styles.dropdownTrigger} onClick={toggleDropdown}>
+                <div className={styles.dropdownTrigger} onClick={toggleDropdown}>
           {label}
-          <Icon 
-            icon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />} 
-            size="small"
-          />
+          {showArrow && (
+            <Icon 
+              icon={isOpen ? <KeyboardArrowUp /> : <KeyboardArrowDown />} 
+              size="small"
+            />
+          )}
         </div>
-        <div className={`${styles.dropdownMenu} ${isOpen ? styles.open : styles.closed}`}>
+        <div className={`${styles.dropdownMenu} ${isOpen ? styles.open : styles.closed} ${alignRight ? styles.rightAlign : ''}`}>
           {items.map((item, index) => (
             <div 
               key={index} 

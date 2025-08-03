@@ -15,11 +15,13 @@
   padding-left: 40px !important;
   background-color: #f0f5ff;
   border: 1px solid #e0e6ff;
+  border-radius: 8px;
 }
 
 .searchInputWrapper input:focus {
   background-color: #ffffff !important;
   border-color: #2874f0 !important;
+  border-radius: 8px;
 }
 
 .searchIconWrapper {
@@ -28,6 +30,166 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestionsContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e6ff;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.suggestionItem {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.suggestionItem:last-child {
+  border-bottom: none;
+}
+
+.suggestionItem:hover,
+.suggestionItem.active {
+  background-color: #f0f5ff;
+}
+
+.suggestionText {
+  font-size: 14px;
+  color: #333;
+}
+
+.noSuggestions {
+  padding: 16px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.loadingSpinner {
+  padding: 16px;
+  text-align: center;
+  color: #2874f0;
+}
+
+/* Suggestion Types */
+.trendingSuggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.trendingText {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.trendingTag {
+  font-size: 11px;
+  color: #2874f0;
+  background: #e8f2ff;
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.productSuggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.productImage {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f5f5f5;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.productTitle {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.productCategory {
+  font-size: 12px;
+  color: #666;
+}
+
+.productPrice {
+  font-size: 12px;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.defaultSuggestion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.suggestionText {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+.noResults {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  color: #666;
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.loadingSpinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #e0e6ff;
+  border-top: 2px solid #2874f0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Responsive */
@@ -38,15 +200,156 @@
   
   .searchInputWrapper input {
     padding-left: 35px !important;
+    border-radius: 8px;
   }
   
   .searchIconWrapper {
     left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .suggestionsContainer {
+    border-radius: 0 0 6px 6px;
+    max-height: 280px;
+  }
+  
+  .suggestionItem {
+    padding: 11px 14px;
+  }
+  
+  .trendingSuggestion {
+    gap: 10px;
+  }
+  
+  .trendingText {
+    font-size: 13px;
+  }
+  
+  .trendingTag {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+  
+  .productSuggestion {
+    gap: 10px;
+  }
+  
+  .productImage {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .productTitle {
+    font-size: 13px;
+  }
+  
+  .productCategory {
+    font-size: 11px;
+  }
+  
+  .productPrice {
+    font-size: 11px;
+  }
+  
+  .defaultSuggestion {
+    gap: 10px;
+  }
+  
+  .suggestionText {
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
+  .searchContainer {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .searchInputWrapper {
+    width: 100%;
+  }
+  
   .searchInputWrapper input {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    background-color: #f0f5ff !important;
+    border: 1px solid #e0e6ff !important;
+    color: #333 !important;
+    padding: 10px 12px 10px 35px !important;
+    height: 36px !important;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .searchInputWrapper input::placeholder {
+    color: #666 !important;
+  }
+  
+  .searchInputWrapper input:focus {
+    background-color: #ffffff !important;
+    border-color: #2874f0 !important;
+    border-radius: 8px;
+  }
+  
+  .searchIconWrapper {
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .suggestionsContainer {
+    background: white !important;
+    border: 1px solid #e0e6ff !important;
+    border-top: none !important;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    max-height: 250px;
+  }
+  
+  .suggestionItem {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f5f5f5 !important;
+  }
+  
+  .suggestionItem:hover,
+  .suggestionItem.active {
+    background-color: #f0f5ff !important;
+  }
+  
+  .suggestionText {
+    font-size: 13px;
+    color: #333 !important;
+  }
+  
+  .trendingText {
+    font-size: 13px !important;
+  }
+  
+  .productTitle {
+    font-size: 13px !important;
+  }
+  
+  .productCategory {
+    font-size: 11px !important;
+  }
+  
+  .productPrice {
+    font-size: 11px !important;
+  }
+  
+  .noSuggestions {
+    color: #666 !important;
+  }
+  
+  .loadingSpinner {
+    color: #2874f0 !important;
   }
 }

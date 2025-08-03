@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useLogin } from '../contexts/LoginContext';
 import MainLayout from '../components/templates/MainLayout';
 import CategoryNav from '../components/organisms/CategoryNav';
 import OffersBanner from '../components/organisms/OffersBanner';
@@ -14,7 +15,7 @@ import styles from './HomePage.module.css';
 
 const HomePage = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, toggleLogin, userDropdownItems } = useLogin();
 
   const { data: productsData, loading: productsLoading, error: productsError, refetch: refetchProducts } = useProducts();
 
@@ -34,19 +35,12 @@ const HomePage = () => {
   };
 
   const handleLoginClick = () => {
-    setIsLoggedIn(!isLoggedIn);
+    toggleLogin();
   };
 
   const handleCategoryClick = (category) => {
     navigate(`/search?category=${category}`);
   };
-
-  const userDropdownItems = [
-    'My Profile',
-    'Orders',
-    'Wishlist',
-    'Logout'
-  ];
 
   const handleRetry = () => {
     refetchProducts();

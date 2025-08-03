@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
 import { useToast } from '../contexts/ToastContext';
+import { useLogin } from '../contexts/LoginContext';
 import MainLayout from '../components/templates/MainLayout';
 import Loading from '../components/atoms/Loading';
 import ErrorMessage from '../components/atoms/ErrorMessage';
@@ -13,7 +14,7 @@ const SearchPage = () => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const { addToast } = useToast();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, toggleLogin, userDropdownItems } = useLogin();
 
   const searchQuery = searchParams.get('q');
   const categoryFilter = searchParams.get('category');
@@ -56,10 +57,6 @@ const SearchPage = () => {
     }
   };
 
-  const handleLoginClick = () => {
-    setIsLoggedIn(!isLoggedIn);
-  };
-
   const formatPrice = (price) => {
     return `₹${Math.floor(price * 80)}`;
   };
@@ -68,12 +65,9 @@ const SearchPage = () => {
     return Math.floor(Math.random() * 60) + 20;
   };
 
-  const userDropdownItems = [
-    'My Profile',
-    'Orders',
-    'Wishlist',
-    'Logout'
-  ];
+  const handleLoginClick = () => {
+    toggleLogin();
+  };
 
   const handleRetry = () => {
     refetchProducts();

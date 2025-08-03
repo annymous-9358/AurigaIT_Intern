@@ -129,28 +129,44 @@
   justify-content: center;
 }
 
+/* More menu styling */
+.moreItem .label {
+  display: none; /* Hide "More" text on all screen sizes, show only 3-dot icon */
+}
 
+.moreItem {
+  position: relative;
+}
 
+/* Tablet styles */
 @media (max-width: 768px) {
   .headerContent {
     padding: 8px 12px;
     gap: 12px;
+    min-height: 56px;
   }
   
   .logoSection {
-    min-width: 120px;
+    min-width: 100px;
+    flex-shrink: 0;
   }
   
   .logoText {
-    font-size: 18px;
+    font-size: 17px;
+  }
+  
+  .tagline {
+    font-size: 9px;
   }
   
   .searchSection {
+    flex: 1;
     max-width: none;
   }
   
   .actionsSection {
-    gap: 16px;
+    gap: 14px;
+    flex-shrink: 0;
   }
   
   .actionItem {
@@ -159,44 +175,72 @@
   }
   
   .label {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  
+  /* Hide "Become a Seller" on tablet (now it's 2nd item) */
+  .actionItem:nth-child(2) {
+    display: none;
   }
 }
 
+/* Mobile styles */
 @media (max-width: 480px) {
   .headerContent {
-    padding: 6px 8px;
+    padding: 8px 10px;
     gap: 8px;
+    min-height: 56px;
+    flex-wrap: nowrap;
   }
   
   .logoSection {
-    min-width: 100px;
+    min-width: 70px;
+    flex-shrink: 0;
   }
   
   .logoText {
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .tagline {
-    display: none;
+    font-size: 8px;
+  }
+  
+  .searchSection {
+    flex: 1;
+    margin: 0 6px;
   }
   
   .actionsSection {
-    gap: 8px;
+    gap: 10px;
+    flex-shrink: 0;
   }
   
   .actionItem {
-    padding: 4px 6px;
+    padding: 4px 5px;
+    min-width: auto;
   }
   
+  /* Show only icons on mobile - clean UI */
   .label {
     display: none;
   }
   
+  /* Hide "Become a Seller" completely on mobile */
+  .actionItem:nth-child(2) {
+    display: none;
+  }
+  
+  /* Hide "More" dropdown completely on mobile */
+  .moreItem {
+    display: none;
+  }
   
   .cartBadge {
     font-size: 10px;
     min-width: 16px;
     height: 16px;
+    top: -6px;
+    right: -6px;
   }
 }

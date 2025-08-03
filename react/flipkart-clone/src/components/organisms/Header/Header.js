@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 import SearchBar from '../../molecules/SearchBar';
 import Dropdown from '../../molecules/Dropdown';
 import Icon from '../../atoms/Icon';
-import { ShoppingCart, Person, KeyboardArrowDown } from '@mui/icons-material';
+import { ShoppingCart, Person, MoreVert } from '@mui/icons-material';
 
 const Header = ({ 
   onSearch, 
@@ -12,7 +12,8 @@ const Header = ({
   onCartClick, 
   cartItemCount = 0,
   isLoggedIn = false,
-  userDropdownItems = []
+  userDropdownItems = [],
+  onUserAction
 }) => {
   const navigate = useNavigate();
 
@@ -25,9 +26,14 @@ const Header = ({
   };
 
   const handleUserAction = (action) => {
-    if (action === 'login' && onLoginClick) {
-      onLoginClick();
+    if (onUserAction) {
+      onUserAction(action);
+    } else if (action === 'Logout') {
+      if (onLoginClick) {
+        onLoginClick(); // This will toggle login state (logout)
+      }
     }
+    // Handle other actions like 'My Profile', 'Orders', 'Wishlist' here if needed
   };
 
   return (
@@ -63,26 +69,11 @@ const Header = ({
               <div className={styles.actionItem} onClick={onLoginClick}>
                 <Icon icon={<Person />} color="white" size="small" />
                 <span className={styles.label}>Login</span>
-                <Icon icon={<KeyboardArrowDown />} color="white" size="small" />
               </div>
             )}
             
             <div className={styles.actionItem}>
               <span className={styles.label}>Become a Seller</span>
-            </div>
-            
-            <div className={styles.actionItem}>
-              <span className={styles.label}>More</span>
-              <Dropdown
-                label=""
-                items={[
-                  'Notification Preferences',
-                  'Sell on Flipkart', 
-                  '24x7 Customer Care',
-                  'Advertise',
-                  'Download App'
-                ]}
-              />
             </div>
             
             <div className={styles.cartContainer}>
@@ -93,6 +84,21 @@ const Header = ({
                   <span className={styles.cartBadge}>{cartItemCount}</span>
                 )}
               </div>
+            </div>
+            
+            <div className={styles.actionItem + ' ' + styles.moreItem}>
+              <Dropdown
+                label={<Icon icon={<MoreVert />} color="white" size="small" />}
+                items={[
+                  'Notification Preferences',
+                  'Sell on Flipkart', 
+                  '24x7 Customer Care',
+                  'Advertise',
+                  'Download App'
+                ]}
+                showArrow={false}
+                alignRight={true}
+              />
             </div>
           </div>
         </div>

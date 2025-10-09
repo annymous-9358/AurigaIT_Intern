@@ -62,7 +62,6 @@ const SearchBar = ({
         category: product.category,
         brand: product.brand,
         image: product.thumbnail,
-        price: product.price
       }));
 
     // Get trending searches
